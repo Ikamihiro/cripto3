@@ -13,9 +13,9 @@ while True:
         path = str(input('\nDigite o PATH do arquivo: '))
         try:
             arquivo = open(path, 'r') # abrindo o arquivo
+            saida = open('hash.txt','w')
             dados = arquivo.read() # lendo os dados dentro do arquivo
             dados = Hash(dados) # Chamando a função principal
-            saida = open('hash.txt','w')
             saida.write(dados) # escrevendo o resultado no arquivo de saída
             print('\nO resultado do HASH está disponível no arquivo "hash.txt"!')
             print('\nSe divirta :)\n')

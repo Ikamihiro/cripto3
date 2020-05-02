@@ -1,11 +1,12 @@
 # Função que exibe um MENU
 def Menu():
-    print('''
+    print(
+'''
 Bem Vindo!
 Escolha sua opção:
 1 - Realizar HASH
 2 - Sair
-    ''')
+''')
 
 # Função que realiza um XOR entre dois blocos de bits
 def XOR(direita, esquerda):
@@ -41,6 +42,8 @@ def RotacionarEsquerda(bloco, n, tam_bloco):
     rotacao = ''
     num_bits = ''
     for i in range(0, n):
+        if(n > 64):
+            i = 0
         num_bits = num_bits + str(bloco[i])
     for j in range(n, tam_bloco, 1):
         rotacao = rotacao + str(bloco[j])
